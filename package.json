@@ -15,17 +15,21 @@
 	},
 	"module": "src/index.js",
 	"dependencies": {
-		"@servicenow/ui-core": "quebec",
-		"@servicenow/ui-renderer-snabbdom": "quebec",
 		"@servicenow/cli-archetype": "24.0.0",
 		"@servicenow/cli-component-archetype": "24.0.0",
-		"@servicenow/sass-theme": "quebec",
+		"@servicenow/library-translate": "quebec",
 		"@servicenow/sass-kit": "quebec",
-		"@servicenow/library-translate": "quebec"
+		"@servicenow/sass-theme": "quebec",
+		"@servicenow/ui-core": "quebec",
+		"@servicenow/ui-renderer-snabbdom": "quebec"
 	},
 	"devDependencies": {
 		"@servicenow/cli-archetype-dev": "24.0.0",
-		"@servicenow/cli-component-archetype-dev": "24.0.0"
+		"@servicenow/cli-component-archetype-dev": "24.0.0",
+		"@servicenow/ui-enzyme-adapter": "^24.1.1",
+		"chai": "^5.1.1",
+		"enzyme": "^3.11.0",
+		"jest": "^29.7.0"
 	},
 	"scripts": {
 		"start": "snc ui-component develop --open",
