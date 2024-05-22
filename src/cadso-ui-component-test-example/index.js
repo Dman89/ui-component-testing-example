@@ -1,8 +1,9 @@
 import {createCustomElement} from '@servicenow/ui-core';
 import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import styles from './styles.scss';
+import actionHandlers from './actionHandlers';
 
-const view = (state, {updateState}) => {
+const view = (state, { dispatch }) => {
     const { tally } = state;
 	return (
 		<div>
@@ -10,13 +11,13 @@ const view = (state, {updateState}) => {
 			<span>
 				<button
 					type="button"
-					on-click={() => updateState({ tally: tally + 1 })}
+					on-click={() => dispatch("INCREMENT")}
 				>
 					Increment
 				</button>
 				<button
 					type="button"
-					on-click={() => updateState({ tally: tally - 1 })}
+					on-click={() => dispatch("DECREMENT")}
 				>
 					Decrement
 				</button>
@@ -24,7 +25,7 @@ const view = (state, {updateState}) => {
 			<span>
 				<button
 					type="button"
-					on-click={() => updateState({tally: 0})}
+					on-click={() => dispatch("CLEAR")}
 				>
 					Clear
 				</button>
@@ -40,5 +41,6 @@ createCustomElement('cadso-ui-component-test-example', {
 		tally: 0
     },
 	view,
-	styles
+	styles,
+	actionHandlers
 });
