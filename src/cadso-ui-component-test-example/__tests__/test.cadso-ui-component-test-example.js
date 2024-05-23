@@ -4,11 +4,15 @@ import Enzyme, { mount } from 'enzyme';
 import { UIEnzymeAdapter } from '@servicenow/ui-enzyme-adapter';
 import view from '../view.js';
 
-describe('cadso-ui-component-test-example Test', () => {
-	it('should be true', () => {
-		expect(true).toBe(true);
-	});
-});
+// Unit Tests
+// 1. Functions return expected values
+//      fn() => expected value
+// 2. ActionHandlers update state as expected
+//      dispatch('ACTION', payload) => new value on state
+// 3. Component renders correctly with different props & interactions / states
+//      mount(<Component prop1={value1} prop2={value2} />) => Props present in the component
+// 4. Component updates correctly with different props & interactions / states
+//      mount(<Component />) => dispatched event => state updated
 
 Enzyme.configure({ adapter: new UIEnzymeAdapter() });
 
