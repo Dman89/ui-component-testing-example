@@ -1,4 +1,5 @@
-import { expect } from 'chai';
+// import { expect } from 'chai';
+import 'regenerator-runtime/runtime';
 import Enzyme, { mount } from 'enzyme';
 import { UIEnzymeAdapter } from '@servicenow/ui-enzyme-adapter';
 import view from '../view.js';
